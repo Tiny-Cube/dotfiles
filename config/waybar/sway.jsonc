@@ -1,0 +1,30 @@
+{
+    "include": [
+        "modules.jsonc",
+        "modules-sway.jsonc"
+    ],
+    "position": "top",
+    "fixed-center": true,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/window"
+    ],
+    "modules-center": [
+        "clock",
+        "sway/mode"
+    ],
+    "modules-right": [
+        "privacy",
+        "bluetooth",
+        "network",
+        "idle_inhibitor",
+        "custom/colorpicker",
+        "tray",
+        "group/audio",
+        "battery",
+        "group/ddcutil",
+        "power-profiles-daemon",
+        "group/powermenu"
+    ]
+}

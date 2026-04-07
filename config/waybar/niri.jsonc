@@ -1,0 +1,36 @@
+{
+    "include": [
+        "modules.jsonc"
+    ],
+    
+    "position": "top",
+    "fixed-center": true,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "ext/workspaces",
+        "niri/window"
+        
+    ],
+    "modules-center": [
+        
+        "clock"
+        
+    ],
+    "modules-right": [
+        "privacy",
+        "bluetooth",
+        "network",
+        
+        "idle_inhibitor",
+        "custom/colorpicker",
+        
+        "tray",
+        
+        
+        "group/audio",
+        "battery",
+        "group/ddcutil",
+        "power-profiles-daemon",
+        "group/powermenu"
+    ]
+}
