@@ -1,0 +1,66 @@
+# vim: ft=swayconfig
+#
+# Default config for scroll
+#
+# Copy this to ~/.config/scroll/config and edit it to your liking.
+#
+# Read `man 5 scroll` for a complete reference.
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left Left
+set $down Down 
+set $up Up
+set $right Right
+# Your preferred terminal emulator
+set $term alacritty
+# Your preferred application launcher
+set $menu wmenu-run-color
+
+
+exec "fcitx5 -d"
+
+# Output and Input configuration
+include $HOME/.config/scroll/scroll.d/io.conf
+
+### Windows defaults
+include $HOME/.config/scroll/scroll.d/windows.conf
+
+### Key bindings
+include $HOME/.config/scroll/scroll.d/keybindings.conf
+
+
+#
+# Workspace rules:
+#
+# Opens a terminal when creating workspace 6
+# workspace 6 exec kitty
+include $HOME/.config/scroll/scroll.d/floating.conf
+
+
+#
+# Status Bar:
+#
+# Read `man 5 scroll-bar` for more information about this section.
+bar {
+    #position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    #status_command while ~/.config/sway/status.sh; do sleep 1; done
+    scrollbar_command waybar
+
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#        scroller #2F343AFF #055E20FF #FFFFFFFF
+#    }
+}
+
+
+include /etc/scroll/config.d/*
